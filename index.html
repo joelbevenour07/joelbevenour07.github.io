@@ -22,6 +22,26 @@
         justify-content: center;
       }
 
+      .carousel-item img {
+        object-fit: contain;
+        width: auto;
+        height: 100%;
+        display: block;
+      }
+
+      .carousel-caption {
+        z-index: 1;
+        position: absolute; /* Make sure it's positioned within the slide */
+        bottom: 0vh;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5); /* Optional for readability */
+        padding: 0.5rem;
+        border-radius: 5vh;
+      }
+
       .profile-popout,
       .profile-popout-2 {
         position: static;
@@ -550,4 +570,3 @@
   </script>
 </body>
 </html>
-
