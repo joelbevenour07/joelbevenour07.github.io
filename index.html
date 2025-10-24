@@ -44,14 +44,17 @@
             margin: 0 auto;
           }
           
-          /* 5. Center the carousel column's content (especially for the static controls) */
+          .project-row .row {
+              margin-left: 0;
+              margin-right: 0;
+          }
+          
           .col-md-7, .col-md-5 {
               width: 100%;
-              padding-left: 15px; /* Add back some side padding to keep text off the edge */
-              padding-right: 150px;
-              text-align: center; /* Center text and static controls */
+              padding-left: 5px;  /* Reduced side padding */
+              padding-right: 5px; /* Reduced side padding */
+              text-align: center; 
           }
-      
           /* Move carousel controls BELOW the image (Keep this block as it is your custom design) */
           .carousel-control-prev,
           .carousel-control-next {
@@ -584,6 +587,7 @@
   </script>
 </body>
 </html>
+
 
 
 
