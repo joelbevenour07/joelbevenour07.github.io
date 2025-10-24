@@ -9,77 +9,57 @@
   <style>
 
 
-     @media (max-width: 320px) {
-      .carousel {
-        margin-left: 10px;
-        margin-right: 10px;
-      }
+/* Mobile portrait optimization for carousel */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* Make carousel use nearly full screen width */
+  .carousel {
+    margin: 0;
+    width: 100vw;
+  }
 
-      .carousel-inner {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+  .carousel-inner {
+    height: auto;
+  }
 
-      .carousel-item img {
-        object-fit: contain;
-        width: auto;
-        height: 100%;
-        display: block;
-      }
+  .carousel-item img,
+  .carousel-item video {
+    width: 100vw;          /* Full width of the screen */
+    height: auto;          /* Adjust height automatically */
+    object-fit: contain;   /* Prevent cropping */
+  }
 
-      .carousel-caption {
-        z-index: 1;
-        position: absolute; /* Make sure it's positioned within the slide */
-        bottom: 0vh;
-        left: 0;
-        right: 0;
-        text-align: center;
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.5); /* Optional for readability */
-        padding: 0.5rem;
-        border-radius: 5vh;
-      }
+  /* Move carousel controls BELOW the image */
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: static;      /* Take them out of absolute positioning */
+    display: inline-block;
+    width: 48%;
+    filter: invert(1);
+    transform: none;
+    margin-top: 10px;
+  }
 
-      .profile-popout,
-      .profile-popout-2 {
-        position: static;
-        display: block;
-        margin: 20px auto;
-        transform: none;
-        width: 25vh;
-        right: 20vh;
-      }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
 
-      .custom-box {
-        margin-top: 60px;
-        border-radius: 20px;
-      }
+  /* Center buttons horizontally below the image */
+  .carousel .carousel-control-prev,
+  .carousel .carousel-control-next {
+    text-align: center;
+  }
 
-      .row.align-items-center {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .col-md-5,
-      .col-md-7 {
-        width: 100%;
-      }
-
-      .carousel-caption {
-        font-size: 14px;
-        padding: 0.25rem;
-      }
-
-      h1, h2 {
-        font-size: 1.5rem;
-      }
-
-      .carousel-item video{
-        max-height: 300px;
-      }
-    }
+  /* Hide captions if they take too much space, optional */
+  .carousel-caption {
+    position: static;
+    background: rgba(0,0,0,0.4);
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-top: 5px;
+  }
+}
 
 
     .carousel{
@@ -575,12 +555,4 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
 
