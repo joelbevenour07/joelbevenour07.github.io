@@ -7,61 +7,59 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-
-
-/* Mobile portrait optimization for carousel */
-@media only screen and (max-width: 768px) and (orientation: portrait) {
-  /* Make carousel use nearly full screen width */
-   .carousel {
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-
-  .carousel-inner {
-    height: auto;
-  }
-
-  .carousel-item img,
-  .carousel-item video {
-    width: 100%;          /* Full width of the screen */
-    height: auto;          /* Adjust height automatically */
-    object-fit: contain;   /* Prevent cropping */
-  }
-
-  /* Move carousel controls BELOW the image */
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: static;      /* Take them out of absolute positioning */
-    display: inline-block;
-    width: 48%;
-    filter: invert(1);
-    transform: none;
-    margin-top: 10px;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  /* Center buttons horizontally below the image */
-  .carousel .carousel-control-prev,
-  .carousel .carousel-control-next {
-    text-align: center;
-  }
-
-  /* Hide captions if they take too much space, optional */
-  .carousel-caption {
-    position: static;
-    background: rgba(0,0,0,0.4);
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    margin-top: 5px;
-  }
-}
+    /* Mobile portrait optimization for carousel */
+    @media only screen and (max-width: 768px) and (orientation: portrait) {
+      /* Make carousel use nearly full screen width */
+       .carousel {
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+    
+    
+      .carousel-inner {
+        height: auto;
+      }
+    
+      .carousel-item img,
+      .carousel-item video {
+        width: 100%;          /* Full width of the screen */
+        height: auto;          /* Adjust height automatically */
+        object-fit: contain;   /* Prevent cropping */
+      }
+    
+      /* Move carousel controls BELOW the image */
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: static;      /* Take them out of absolute positioning */
+        display: inline-block;
+        width: 48%;
+        filter: invert(1);
+        transform: none;
+        margin-top: 10px;
+      }
+    
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+      }
+    
+      /* Center buttons horizontally below the image */
+      .carousel .carousel-control-prev,
+      .carousel .carousel-control-next {
+        text-align: center;
+      }
+    
+      /* Hide captions if they take too much space, optional */
+      .carousel-caption {
+        position: static;
+        background: rgba(0,0,0,0.4);
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        margin-top: 5px;
+      }
+    }
 
 
     .carousel{
@@ -557,6 +555,7 @@
   </script>
 </body>
 </html>
+
 
 
 
