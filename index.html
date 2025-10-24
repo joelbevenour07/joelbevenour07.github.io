@@ -9,64 +9,84 @@
   <style>
     /* Mobile portrait optimization for carousel */
       @media only screen and (max-width: 768px) and (orientation: portrait) {
+          
+          html, body {
+            overflow-x: hidden; /* Prevent side scrolling */
+          }
+          
+          /* 1. Remove Container padding to give the carousel more room */
+          .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            margin: 0 auto;
+          }
+          
+          /* 2. Reset the carousel's horizontal margins from the desktop CSS */
+          .carousel {
+            margin-left: 0;
+            margin-right: 0;
+          }
+          
+          /* 3. RESET the fixed desktop height and use auto height */
+          .carousel-inner {
+            height: auto; /* <--- KEY: Resets the 60vh desktop height */
+            width: 100%;
+          }
+          
+          /* 4. Ensure images/videos fill the width and set height to auto */
+          .carousel-item img,
+          .carousel-item video {
+            width: 100%;                /* <--- KEY: Fill the width of the inner container */
+            height: auto;               /* <--- KEY: Let the image's aspect ratio dictate height */
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+          }
+          
+          /* 5. Center the carousel column's content (especially for the static controls) */
+          .col-md-7, .col-md-5 {
+              width: 100%;
+              padding-left: 15px; /* Add back some side padding to keep text off the edge */
+              padding-right: 15px;
+              text-align: center; /* Center text and static controls */
+          }
       
-        html, body {
-          overflow-x: hidden; /* Prevent side scrolling */
-        }
-        
-        .col-md-7 { 
-          width: 100%; 
-          text-align: center; 
-          padding: 0 15px; 
-        }
-      
-
-        .carousel-inner {
-          width: 100%;
-          height: auto;
-        }
-      
-        .carousel-item img,
-        .carousel-item video {
-          width: 100%;                /* Fill available space */
-          height: auto;
-          object-fit: contain;
-          display: block;
-          margin: 0 auto;
-        }
-      
-        /* Move carousel controls BELOW the image */
-        .carousel-control-prev,
-        .carousel-control-next {
-          position: static;
-          display: inline-block;
-          width: 45%;
-          filter: invert(1);
-          transform: none;
-          margin-top: 10px;
-          text-align: center;
-        }
-      
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          width: 30px;
-          height: 30px;
-        }
-      
-        /* Center buttons under carousel */
-        .carousel button {
-          margin: 0 auto;
-        }
-      
-        .carousel-caption {
-          position: static;
-          text-align: center;
-          background: rgba(0,0,0,0.5);
-          font-size: 0.9rem;
-          padding: 0.5rem;
-          margin-top: 5px;
-          border-radius: 0.5rem;
-        }
+          /* Move carousel controls BELOW the image (Keep this block as it is your custom design) */
+          .carousel-control-prev,
+          .carousel-control-next {
+            position: static;
+            display: inline-block;
+            width: 45%;
+            filter: invert(1);
+            transform: none;
+            margin-top: 10px;
+            text-align: center;
+          }
+          
+          .carousel-control-prev-icon,
+          .carousel-control-next-icon {
+            width: 30px;
+            height: 30px;
+          }
+          
+          /* Center buttons under carousel */
+          .carousel button {
+            margin: 0 auto;
+          }
+          
+          .carousel-caption {
+            position: static; /* Keep static, as per your design */
+            background: rgba(0,0,0,0.5);
+            font-size: 0.9rem;
+            padding: 0.5rem;
+            margin-top: 5px;
+            border-radius: 0.5rem;
+            width: 100%; /* Ensure the caption takes full horizontal space */
+            left: 0;
+            right: 0;
+            text-align: center;
+            transform: none !important; /* Remove any previous centering transform */
+          }
       }
 
 
@@ -563,6 +583,7 @@
   </script>
 </body>
 </html>
+
 
 
 
