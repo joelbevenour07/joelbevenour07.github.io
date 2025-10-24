@@ -91,6 +91,22 @@
             text-align: center;
             transform: none !important; /* Remove any previous centering transform */
           }
+
+          .project-row {
+            opacity: 1; /* Make elements visible immediately */
+            transform: none !important; /* Disable the starting offset (translateX) */
+            transition: none !important; /* Disable the transition effect itself */
+          }
+          
+          /* NEW: Ensure the 'slide-in-right' class doesn't override the reset */
+          .project-row.slide-in-right {
+              transform: none !important;
+          }
+          
+          /* NEW: Ensure the 'visible' class doesn't use the animated transform on mobile */
+          .project-row.visible {
+              transform: none !important;
+          }
       }
 
 
@@ -587,6 +603,7 @@
   </script>
 </body>
 </html>
+
 
 
 
