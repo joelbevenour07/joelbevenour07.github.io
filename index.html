@@ -8,58 +8,71 @@
 
   <style>
     /* Mobile portrait optimization for carousel */
-    @media only screen and (max-width: 768px) and (orientation: portrait) {
-      /* Make carousel use nearly full screen width */
-       .carousel {
-        margin: 0;
-        width: 75%;
-        overflow-x: hidden;
+      @media only screen and (max-width: 768px) and (orientation: portrait) {
+      
+        html, body {
+          overflow-x: hidden; /* Prevent side scrolling */
+        }
+      
+        .container {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin: 0 auto;
+        }
+      
+        .carousel {
+          margin: 0 auto;             /* Center horizontally */
+          width: 100vw;               /* Exactly full screen width */
+          max-width: 100vw;           /* Prevent overflow */
+          overflow: hidden;           /* Hide any extra content */
+        }
+      
+        .carousel-inner {
+          width: 100%;
+          height: auto;
+        }
+      
+        .carousel-item img,
+        .carousel-item video {
+          width: 100%;                /* Fill available space */
+          height: auto;
+          object-fit: contain;
+          display: block;
+          margin: 0 auto;
+        }
+      
+        /* Move carousel controls BELOW the image */
+        .carousel-control-prev,
+        .carousel-control-next {
+          position: static;
+          display: inline-block;
+          width: 45%;
+          filter: invert(1);
+          transform: none;
+          margin-top: 10px;
+          text-align: center;
+        }
+      
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 30px;
+          height: 30px;
+        }
+      
+        /* Center buttons under carousel */
+        .carousel button {
+          margin: 0 auto;
+        }
+      
+        .carousel-caption {
+          position: static;
+          background: rgba(0,0,0,0.5);
+          font-size: 0.9rem;
+          padding: 0.5rem;
+          margin-top: 5px;
+          border-radius: 0.5rem;
+        }
       }
-    
-    
-      .carousel-inner {
-        height: auto;
-      }
-    
-      .carousel-item img,
-      .carousel-item video {
-        width: 75%;          /* Full width of the screen */
-        height: auto;          /* Adjust height automatically */
-        object-fit: contain;   /* Prevent cropping */
-      }
-    
-      /* Move carousel controls BELOW the image */
-      .carousel-control-prev,
-      .carousel-control-next {
-        position: static;      /* Take them out of absolute positioning */
-        display: inline-block;
-        width: 48%;
-        filter: invert(1);
-        transform: none;
-        margin-top: 10px;
-      }
-    
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        width: 30px;
-        height: 30px;
-      }
-    
-      /* Center buttons horizontally below the image */
-      .carousel .carousel-control-prev,
-      .carousel .carousel-control-next {
-        text-align: center;
-      }
-    
-      /* Hide captions if they take too much space, optional */
-      .carousel-caption {
-        position: static;
-        background: rgba(0,0,0,0.4);
-        font-size: 0.9rem;
-        padding: 0.5rem;
-        margin-top: 5px;
-      }
-    }
 
 
     .carousel{
@@ -555,6 +568,7 @@
   </script>
 </body>
 </html>
+
 
 
 
