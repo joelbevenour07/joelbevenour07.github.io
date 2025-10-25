@@ -545,9 +545,37 @@
         observer.observe(row);
       });
     });
+    
+    document.querySelectorAll('.carousel').forEach(carousel => {
+    let startX = 0;
+    let endX = 0;
+    
+    carousel.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      });
+    
+    carousel.addEventListener('touchmove', e => {
+        endX = e.touches[0].clientX;
+      });
+    
+    carousel.addEventListener('touchend', () => {
+        const threshold = 50; // Minimum swipe distance in px
+        if (Math.abs(startX - endX) > threshold) {
+          if (endX < startX) {
+            // Swiped left → next slide
+            bootstrap.Carousel.getInstance(carousel).next();
+          } else {
+            // Swiped right → previous slide
+            bootstrap.Carousel.getInstance(carousel).prev();
+          }
+        }
+      });
+    });
+    
   </script>
 </body>
 </html>
+
 
 
 
