@@ -126,27 +126,23 @@
     }
 
 
-    .profile-popout {
-      position: absolute;
-      top: 40%;
-      right: 5vh;
-      transform: translateY(-100%); /* Pull it above the box */
-      width: 15vh;
-      height: auto;
-
-      z-index: 2;
-    }
-
-    
+    .profile-popout,
     .profile-popout-2 {
       position: absolute;
-      top: 30%;
-      right: 78%;
-      transform: translateY(-80%);
-      width: 30vh;
+      top: 0; /* start at top of box */
+      width: 20%; /* relative to box width */
       height: auto;
-
-      z-index: 3;
+      z-index: 2;
+    }
+    
+    .profile-popout {
+      right: 0; /* stick to top-right corner */
+      transform: translate(10%, -10%); /* slight adjustment if needed */
+    }
+    
+    .profile-popout-2 {
+      left: 0; /* stick to top-left */
+      transform: translate(-10%, -10%);
     }
 
     .btn {
@@ -215,7 +211,13 @@
     }
 
     @media only screen and (max-width: 748px) and (orientation: portrait) {
-
+      
+      .profile-popout,
+      .profile-popout-2 {
+          width: 30%; /* slightly bigger on small screens */
+          transform: translate(0, -5%); /* adjust popout */
+        }
+      
       body {
           overflow-x: hidden;
         }
@@ -275,6 +277,7 @@
 <div class="container mt-5 position-relative">
   <!-- Styled box with dark background and outline -->
   <div class="custom-box p-4 rounded">
+
     <div class="row align-items-center">
       <h1 class="text-center text-white mb-4">Joel Bevenour - Software Development</h1>
       <center>
@@ -284,12 +287,11 @@
       </p>
       </center>
     </div>
+    <img src="images/computer.png" alt="Old Computer" class="profile-popout-2 d-none d-md-block"?>
+    <img src="images/Me.png" alt="Joel Bevenour" class="profile-popout d-none d-md-block">
   </div>
 
-  <img src="images/computer.png" alt="Old Computer" class="profile-popout-2 d-none d-md-block">
 
-  <!-- Image sticking out of the top-right corner -->
-  <img src="images/Me.png" alt="Joel Bevenour" class="profile-popout d-none d-md-block">
 </div>
 
 
@@ -607,6 +609,7 @@
   </script>
 </body>
 </html>
+
 
 
 
