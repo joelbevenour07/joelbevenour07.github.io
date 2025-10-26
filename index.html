@@ -42,14 +42,32 @@
       opacity: 0.8;
     }
     
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 2px solid white;              
+      border-radius: 50%;                   
+      padding: 1.5vh;                       
+      background-size: 60%;                
+    }
+    
+
     .carousel-control-prev {
-      left: 0;                        /* back inside the carousel */
+      left: 1vh;
     }
     
     .carousel-control-next {
-      right: 0;                       /* back inside the carousel */
+      right: 1vh;
     }
+    
 
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-color: #fff;
+      transform: scale(1.1);
+      transition: all 0.2s ease;
+    }
     .carousel-caption {
       z-index: 1;
       font-size: 1.3rem !important;  
@@ -558,6 +576,7 @@
   </script>
 </body>
 </html>
+
 
 
 
