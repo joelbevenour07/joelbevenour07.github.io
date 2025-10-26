@@ -214,7 +214,7 @@
       font-family:'Garet-Book'
     }
 
-        @media (max-width: 1140px) {
+   @media (max-width: 1140px) {
       .project-row .row {
         flex-direction: column !important;
       }
@@ -224,6 +224,15 @@
         width: 100% !important;
         max-width: 100% !important;
       }
+
+      .carousel-item img,
+      .carousel-item video {
+          width: 100% !important;
+          height: auto !important;
+          object-fit: contain !important;
+          display: block;
+  
+        }
     
       .project-row .col-md-7 {
         margin-bottom: 2rem; /* space between carousel and text */
@@ -623,6 +632,7 @@
   </script>
 </body>
 </html>
+
 
 
 
