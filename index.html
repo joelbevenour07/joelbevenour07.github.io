@@ -268,7 +268,26 @@
           width: 100vw !important;
           max-width: 100vw !important;
         }
-    }
+    
+
+      .profile-popout {
+        position: absolute;
+        top: -43%; /* adjust relative to custom-box */
+        right: 3%;
+        width: 12%;  /* scales relative to container width */
+        height: auto;
+        z-index: 2;
+      }
+      
+      .profile-popout-2 {
+        position: absolute;
+        top: -42%;
+        left: -2%;
+        width: 24%;  /* scales relative to container width */
+        height: auto;
+        z-index: 3;
+      }
+  }
 
   </style>
 </head>
@@ -608,6 +627,7 @@
   </script>
 </body>
 </html>
+
 
 
 
