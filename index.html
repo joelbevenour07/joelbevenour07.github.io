@@ -8,15 +8,14 @@
 
   <style>
     .carousel{
-      margin-left: 10vh;
-      margin-right: 10vh;
-      width:55vh
+      width: 100%;               
+      max-width: 100%;           
+      margin-left: auto;
+      margin-right: auto;
     }
     .carousel-inner {
-      height: 70vh; /* Make the carousel MUCH taller */
-      display: flex;
-      align-items: left;
-      justify-content: left;
+      width: 100%;
+      height: auto;   
     }
 
     .carousel-item {
@@ -24,22 +23,26 @@
       position: relative;
     }
 
-    .carousel-item img, 
-    .carousel-item video
-    {
+    .carousel-item img,
+    .carousel-item video {
+      width: 100%;               /* Fill column width */
+      height: auto;              /* Keep aspect ratio */
       object-fit: contain;
-      width: auto;
       display: block;
-      height: 70vh;
+      max-height: 70vh;          /* Optional: prevent excessive tallness */
     }
+    
     .carousel-control-prev,
     .carousel-control-next {
       filter: invert(1);
-      width: 5vh;                     /* reasonable size */
+      width: 5vh;
+      height: 5vh;
       top: 50%;
       transform: translateY(-50%);
+      opacity: 0.9;
       z-index: 2;
-      opacity: 0.8;
+      left: 0;
+      right: 0;
     }
     
     .carousel-control-prev-icon,
@@ -200,7 +203,23 @@
       font-family:'Garet-Book'
     }
 
-    @media only screen and (max-width: 1380px) and (orientation: portrait) {
+        @media (max-width: 1140px) {
+      .project-row .row {
+        flex-direction: column !important;
+      }
+    
+      .project-row .col-md-7,
+      .project-row .col-md-5 {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    
+      .project-row .col-md-7 {
+        margin-bottom: 2rem; /* space between carousel and text */
+      }
+    }
+    
+    @media only screen and (max-width: 748px) and (orientation: portrait) {
 
     body {
       overflow-x: hidden;
@@ -575,6 +594,7 @@
   </script>
 </body>
 </html>
+
 
 
 
