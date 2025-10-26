@@ -35,20 +35,19 @@
     .carousel-control-prev,
     .carousel-control-next {
       filter: invert(1);
-      width: auto;
+      width: 5vh;                     /* reasonable size */
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
+      opacity: 0.8;
     }
-
+    
     .carousel-control-prev {
-      left: -10vh; /* move further left — adjust as needed */
-
+      left: 0;                        /* back inside the carousel */
     }
-
+    
     .carousel-control-next {
-      right: -10vh; /* move further right — adjust as needed */
-
+      right: 0;                       /* back inside the carousel */
     }
 
     .carousel-caption {
@@ -559,6 +558,7 @@
   </script>
 </body>
 </html>
+
 
 
 
