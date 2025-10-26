@@ -13,12 +13,13 @@
       margin-left: auto;
       margin-right: auto;
     }
+    
     .carousel-inner {
       width: 100%;
       height: auto;   
     }
-
-    .carousel-item {
+    
+   .slide-content {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -32,6 +33,11 @@
       object-fit: contain;
       display: block;
       max-height: 70vh;          /* Optional: prevent excessive tallness */
+    }
+
+    .carousel-item {
+      display: none;
+      transition: transform 0.6s ease, opacity 0.6s ease;
     }
     
     .carousel-control-prev,
@@ -311,66 +317,84 @@
         <div id="CalorieTrack" class="carousel slide mb-3">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/cc_dashboard.PNG" class="img-fluid" alt="Screenshot 1">
-              <div class="carousel-caption">
-                <h5>Dashboard Overview</h5>
-                <p>The main dashboard with the list of users to log into and an option to add a new user.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/cc_adduser.PNG" class="img-fluid" alt="Screenshot 2">
-              <div class="carousel-caption">
-                <h5>Add User Screen</h5>
-                <p>Add a User to the database with unique user data including verified Name, Age, and Gender data.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/cc_userdashboard.PNG" class="img-fluid" alt="Screenshot 3">
-              <div class="carousel-caption">
-                <h5>User Home Screen</h5>
-                <p>User's personalized nutrition needs are calculated based on their physical attributes and shown in home screen.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/cc_addfood.PNG" class="img-fluid" alt="Screenshot 4">
-              <div class="carousel-caption">
-                <h5>User Food Selection</h5>
-                <p>User can navigate to the Food list page which allows a new user to browse the food data held in the database and add them to their meals.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="images/cc_addfood_dynamic.PNG" class="img-fluid" alt="Screenshot 5">
+              <div class="slide-content">
+                <img src="images/cc_dashboard.PNG" class="img-fluid" alt="Screenshot 1">
                 <div class="carousel-caption">
-                <h5>User Nutrition Info</h5>
-                <p>Based upon user's food selection, nutrition requirements per user are updated dynamically.</p>
+                  <h5>Dashboard Overview</h5>
+                  <p>The main dashboard with the list of users to log into and an option to add a new user.</p>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="images/cc_addexercise.PNG" class="img-fluid" alt="Screenshot 6">
+              <div class="slide-content">
+                <img src="images/cc_adduser.PNG" class="img-fluid" alt="Screenshot 2">
                 <div class="carousel-caption">
-                <h5>User Exercise</h5>
-                <p>A user can also add exercise into the database to allow their caloric need to account for their own level of activity. This is calculated with an equation that takes their average heartrate over time.</p>
+                  <h5>Add User Screen</h5>
+                  <p>Add a User to the database with unique user data including verified Name, Age, and Gender data.</p>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="images/cc_exercisechart.PNG" class="img-fluid" alt="Screenshot 7">
+              <div class="slide-content">
+                <img src="images/cc_userdashboard.PNG" class="img-fluid" alt="Screenshot 3">
                 <div class="carousel-caption">
-                <h5>User Nutrition Dash</h5>
-                <p>Based upon user's exercise caloric requirements per user are updated dynamically and listed on the exercise chart.</p>
+                  <h5>User Home Screen</h5>
+                  <p>User's personalized nutrition needs are calculated based on their physical attributes and shown in home screen.</p>
+                </div>
+              </div>  
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content">
+                <img src="images/cc_addfood.PNG" class="img-fluid" alt="Screenshot 4">
+                <div class="carousel-caption">
+                  <h5>User Food Selection</h5>
+                  <p>User can navigate to the Food list page which allows a new user to browse the food data held in the database and add them to their meals.</p>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="images/cc_useradmin.PNG" class="img-fluid" alt="Screenshot 8">
-              <div class="carousel-caption">
-                <h5>Admin User Page</h5>
-                <p>Admin page to easily update and delete user's and their data in an easy to use interface.</p>
+              <div class="slide-content">
+                <img src="images/cc_addfood_dynamic.PNG" class="img-fluid" alt="Screenshot 5">
+                  <div class="carousel-caption">
+                  <h5>User Nutrition Info</h5>
+                  <p>Based upon user's food selection, nutrition requirements per user are updated dynamically.</p>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="images/cc_foodadmin.PNG" class="img-fluid" alt="Screenshot 9">
-              <div class="carousel-caption">
-                <h5>Admin Food Page</h5>
-                <p>Admin page to easily update and delete different food items and their data in an easy to use interface. Allows for sorting different food items by Meal type.</p>
+              <div class="slide-content">
+                <img src="images/cc_addexercise.PNG" class="img-fluid" alt="Screenshot 6">
+                  <div class="carousel-caption">
+                  <h5>User Exercise</h5>
+                  <p>A user can also add exercise into the database to allow their caloric need to account for their own level of activity. This is calculated with an equation that takes their average heartrate over time.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content">
+                <img src="images/cc_exercisechart.PNG" class="img-fluid" alt="Screenshot 7">
+                  <div class="carousel-caption">
+                  <h5>User Nutrition Dash</h5>
+                  <p>Based upon user's exercise caloric requirements per user are updated dynamically and listed on the exercise chart.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content">
+                <img src="images/cc_useradmin.PNG" class="img-fluid" alt="Screenshot 8">
+                <div class="carousel-caption">
+                  <h5>Admin User Page</h5>
+                  <p>Admin page to easily update and delete user's and their data in an easy to use interface.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content">
+                <img src="images/cc_foodadmin.PNG" class="img-fluid" alt="Screenshot 9">
+                <div class="carousel-caption">
+                  <h5>Admin Food Page</h5>
+                  <p>Admin page to easily update and delete different food items and their data in an easy to use interface. Allows for sorting different food items by Meal type.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -596,6 +620,7 @@
   </script>
 </body>
 </html>
+
 
 
 
