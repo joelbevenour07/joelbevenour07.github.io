@@ -126,23 +126,22 @@
     }
 
 
-    .profile-popout,
-    .profile-popout-2 {
+    .profile-popout {
       position: absolute;
-      top: 0; /* start at top of box */
-      width: 20%; /* relative to box width */
+      top: 0%; /* adjust relative to custom-box */
+      right: 2%;
+      width: 10%;  /* scales relative to container width */
       height: auto;
       z-index: 2;
     }
     
-    .profile-popout {
-      right: 0; /* stick to top-right corner */
-      transform: translate(10%, -10%); /* slight adjustment if needed */
-    }
-    
     .profile-popout-2 {
-      left: 0; /* stick to top-left */
-      transform: translate(-10%, -10%);
+      position: absolute;
+      top: 0%;
+      left: 2%;
+      width: 12%;  /* scales relative to container width */
+      height: auto;
+      z-index: 3;
     }
 
     .btn {
@@ -609,6 +608,7 @@
   </script>
 </body>
 </html>
+
 
 
 
